@@ -30,7 +30,7 @@ data:
       proxy_protocol: false
 
     main_db:
-      host: mariadb
+      host: mariadb.postal.svc.cluster.local
       port: 3306
       username: postal
       password: {{ secrets.mariadb.password }}
@@ -46,14 +46,14 @@ data:
         port: 12201
 
     message_db:
-      host: mariadb
+      host: mariadb.postal.svc.cluster.local
       port: 3306
       username: root
       password: {{ secrets.mariadb.rootPassword }}
       prefix: mdb
 
     rabbitmq:
-      host: rabbitmq
+      host: rabbitmq.postal.svc.cluster.local
       port: 5672
       username: postal
       password: {{ secrets.rabbitmq.password }}
